@@ -4,7 +4,7 @@ import argparse
 import cv2
 import numpy as np
 import glob
-import unisal
+import utils
 
 def heat_map(img):
 
@@ -52,7 +52,7 @@ def load_trainer(train_id=None):
         print(f"Weight file path: {train_id}")
     train_dir = Path(__file__).resolve().parent
     train_dir = train_dir / train_id
-    return unisal.train.Trainer.init_from_cfg_dir(train_dir)
+    return utils.train.Trainer.init_from_cfg_dir(train_dir)
 
 
 def predictions_from_folder(
