@@ -4,7 +4,7 @@
 
 This repository provide the codes of Adaptive Driver Attention (ADA) model to predict salient regions in different traffic scene
 
-![Fig1](./Figures/Fig1.png)
+![Fig1](./figures/Fig1.png)
 
 ## Pytorch Implementation
 
