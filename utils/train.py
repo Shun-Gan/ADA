@@ -24,8 +24,6 @@ from . import utils
 from . import model
 from . import data
 
-from model_dict_visualization import write_modeldic
-
 cv2.setNumThreads(0)
 
 parent_dir = Path(__file__).resolve().parent.parent
