@@ -32,6 +32,9 @@ class BaseModel(nn.Module):
     def load_weights(self, directory, name):
         self.load_state_dict(torch.load(directory / f'weights_{name}.pth'))
 
+    def load_best_trained_weights(self):
+        self.load_state_dict(torch.load('./weights/weights_best.pth'))
+        
     def load_best_weights(self, directory):
         self.load_state_dict(torch.load(directory / f'weights_best.pth'))
 
