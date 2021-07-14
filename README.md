@@ -13,7 +13,7 @@ This repository provide the codes of Adaptive Driver Attention (ADA) model to pr
 clone this repository
 
 ```
-git clone https://github.com/Shun-Gan/ADA.git
+git clone git://github.com/Shun-Gan/ADA.git
 cd ADA
 ```
 
