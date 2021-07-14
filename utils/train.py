@@ -896,7 +896,7 @@ class Trainer(utils.KwConfigClass):
             # Load the best weights, if available, otherwise the weights of
             # the last epoch
             try:
-                self.model.load_best_weights(self.train_dir)
+                self.model.load_best_trained_weights(self.train_dir)
                 print('Best weights loaded')
             except FileNotFoundError:
                 print('No best weights found')
