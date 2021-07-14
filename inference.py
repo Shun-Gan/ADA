@@ -66,16 +66,17 @@ def predictions_from_folder(
 def predict_examples(args):
     train_id = args.pretrained_weight
     path = args.inference_path
+    inference_path = Path(__file__).resolve().parent/path
+    if not inference_path.is_dir():
+        print('not found the inference file in the path: ', inference_path)
+    else:
+        print('infer the frame sequence in the: ', inference_path)
     for example_folder in (Path(__file__).resolve().parent / path).glob("*"):
-        if not example_folder.is_dir():
-            continue
 
         source = example_folder.name
         is_video = True
         print("\nGenerating predictions for %s"%str(source))
 
-        if not example_folder.is_dir():
-            continue
         for video_folder in example_folder.glob('*'):
             predictions_from_folder(
                 video_folder, is_video, train_id=train_id, source=source)
