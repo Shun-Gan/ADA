@@ -32,7 +32,7 @@ class BaseModel(nn.Module):
     def load_weights(self, directory, name):
         self.load_state_dict(torch.load(directory / f'weights_{name}.pth'))
 
-    def load_best_trained_weights(self):
+    def load_best_trained_weights(self,):
         self.load_state_dict(torch.load('./weights/weights_best.pth'))
         
     def load_best_weights(self, directory):
@@ -57,7 +57,7 @@ class BaseModel(nn.Module):
 
 # Set default backbone CNN kwargs
 default_cnn_cfg = {
-    'widen_factor': 1., 'pretrained': True, 'input_channel': 32,
+    'widen_factor': 1., 'pretrained': False, 'input_channel': 32,
     'last_channel': 1280}
 
 # Set default RNN kwargs
