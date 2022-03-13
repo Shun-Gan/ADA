@@ -61,7 +61,6 @@ if __name__ == '__main__':
     if mode == 'train':
         source='EyeTrack'
         # stateful = False
-        # # 好像错了input_shape = (256, 192)，应该是高宽
         # x = Input(batch_shape=(batch_size, input_t, input_shape[0], input_shape[1], 3))
         # y = Input(batch_shape=(batch_size, input_t, input_shape[0], input_shape[1], 3))
         # m = Model(inputs=[x, y], outputs=my_net(x, y, stateful))
