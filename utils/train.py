@@ -1152,21 +1152,6 @@ class Trainer(utils.KwConfigClass):
             dt = max(times)
             print(f"Max single-frame CPU time: {dt:.4f} s ({1 / dt:.1f} fps)")
 
-    def measure_model_size(self):
-        """Measure the model size"""
-
-        model_cls = model.get_model()
-        this_model_cfg = copy.deepcopy(self.model_cfg)
-        net = model_cls(verbose=0, **this_model_cfg)
-
-        dest = self.train_dir
-        torch.save(net, dest / 'net_full.pth')
-        file_size = (dest / 'net_full.pth').stat().st_size / 1e6
-        print("All data sources net size: "
-              f"{file_size:.2f} MB")
-        torch.save(net.state_dict(), dest / 'net_full_state_dict.pth')
-        file_size = (dest / 'net_full_state_dict.pth').stat().st_size / 1e6
-        print(f"All data sources net state dict size: {file_size:.2f} MB")
 
     def get_model_parameter_groups(self):
         """
