@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-This repository provide the codes of Adaptive Driver Attention (ADA) model to predict salient regions in different traffic scene
+This repository provide the codes of Adaptive Driver Attention (ADA) model to predict salient regions in different traffic scenes
 
 ![Fig1](./figures/Fig1.png)
 
