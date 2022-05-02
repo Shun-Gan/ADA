@@ -32,7 +32,7 @@ pip install tensorboardX
 
 ## Inference
 
-We provide a inference demo  for different driver attention dataset, i.e., BDD-A, DADA-2000, DReyeVE, and EyeTrack.
+We provide a inference demo  for different driver attention datasets, i.e., BDD-A, DADA-2000, DReyeVE, and EyeTrack.
 
 ### Pretrained Models
 
